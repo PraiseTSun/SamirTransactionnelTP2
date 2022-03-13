@@ -12,5 +12,7 @@ public class Main {
         ClientService clientService = new ClientService(new ClientDaoJPAH2());
         EmployeService employeService = new EmployeService(new EmployeDaoJPAH2());
         AdminService adminService = new AdminService(new AdminDaoJPAH2());
+
+        var clientId = clientService.createClient("Samir", "Badi", "PraiseTSun", "Javatown");
     }
 }

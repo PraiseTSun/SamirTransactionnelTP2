@@ -7,4 +7,8 @@ public class ClientService {
     public ClientService(ClientDao dao) {
         this.dao = dao;
     }
+
+    public long createClient(String firstName, String lastName, String password, String city) {
+        return dao.saveClient(firstName, lastName, password, city);
+    }
 }
