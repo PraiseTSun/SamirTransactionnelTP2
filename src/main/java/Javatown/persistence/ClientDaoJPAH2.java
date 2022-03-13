@@ -9,4 +9,9 @@ public class ClientDaoJPAH2 extends BaseDaoH2 implements ClientDao {
         save(client);
         return client.getId();
     }
+
+    @Override
+    public Client findClientByPassword(String firstName, String lastName, String password) {
+        return findByPassword(Client.class, firstName, lastName, password);
+    }
 }

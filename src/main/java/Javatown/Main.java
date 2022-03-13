@@ -14,5 +14,7 @@ public class Main {
         AdminService adminService = new AdminService(new AdminDaoJPAH2());
 
         var clientId = clientService.createClient("Samir", "Badi", "PraiseTSun", "Javatown");
+
+        System.out.println(clientService.getClientByPassword("Samir", "Badi", "PraiseTSun"));
     }
 }
