@@ -15,6 +15,7 @@ public class Main {
 
         var clientId = clientService.createClient("Samir", "Badi", "PraiseTSun", "Javatown");
         var employeId = employeService.createEmploye("James", "Levesque", "test");
+        var adminId = adminService.createAdmin("Dave", "Smith", "admin");
 
         System.out.println(clientService.getClientByPassword("Samir", "Badi", "PraiseTSun"));
         System.out.println(employeService.getEmployeByPassword("James", "Levesque", "test"));

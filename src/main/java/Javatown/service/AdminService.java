@@ -7,4 +7,8 @@ public class AdminService {
     public AdminService(AdminDao dao) {
         this.dao = dao;
     }
+
+    public long createAdmin(String firstName, String lastName, String password) {
+        return dao.saveAdmin(firstName, lastName, password);
+    }
 }
