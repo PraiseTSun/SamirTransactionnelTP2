@@ -9,4 +9,9 @@ public class EmployeDaoJPAH2 extends BaseDaoH2 implements EmployeDao {
         save(employe);
         return employe.getId();
     }
+
+    @Override
+    public Employe findEmploye(String firstName, String lastName, String password) {
+        return findByPassword(Employe.class, firstName, lastName, password);
+    }
 }

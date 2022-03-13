@@ -17,5 +17,6 @@ public class Main {
         var employeId = employeService.createEmploye("James", "Levesque", "test");
 
         System.out.println(clientService.getClientByPassword("Samir", "Badi", "PraiseTSun"));
+        System.out.println(employeService.getEmployeByPassword("James", "Levesque", "test"));
     }
 }

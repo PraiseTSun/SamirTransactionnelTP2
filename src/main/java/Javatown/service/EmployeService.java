@@ -1,5 +1,6 @@
 package Javatown.service;
 
+import Javatown.modele.Employe;
 import Javatown.persistence.EmployeDao;
 
 public class EmployeService {
@@ -10,5 +11,9 @@ public class EmployeService {
 
     public long createEmploye(String firstName, String lastName, String password) {
         return dao.saveEmploye(firstName, lastName, password);
+    }
+
+    public Employe getEmployeByPassword(String firstName, String lastName, String password) {
+        return dao.findEmploye(firstName, lastName, password);
     }
 }
