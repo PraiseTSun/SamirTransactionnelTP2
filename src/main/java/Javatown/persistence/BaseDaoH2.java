@@ -17,4 +17,15 @@ public abstract class BaseDaoH2 {
         em.close();
 
     }
+
+    protected <T> T findById(Class<T> t, long id){
+        final EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+
+        var u = (T) em.find(t, id);
+
+        em.getTransaction().commit();
+        em.close();
+        return u;
+    }
 }
