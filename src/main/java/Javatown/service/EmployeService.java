@@ -7,4 +7,8 @@ public class EmployeService {
     public EmployeService(EmployeDao dao){
         this.dao = dao;
     }
+
+    public long createEmploye(String firstName, String lastName, String password) {
+        return dao.saveEmploye(firstName, lastName, password);
+    }
 }
