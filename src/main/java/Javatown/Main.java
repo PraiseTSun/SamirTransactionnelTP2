@@ -40,5 +40,6 @@ public class Main {
         System.out.println(clientService.getDocumentsByName("Canada"));
         System.out.println(clientService.getDocumentsByAuthor("Steve Lee"));
         System.out.println(clientService.getDocumentsByEditor("Marvel"));
+        System.out.println(clientService.getloans(clientId));
     }
 }

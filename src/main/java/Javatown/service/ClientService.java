@@ -2,6 +2,7 @@ package Javatown.service;
 
 import Javatown.modele.AbstractDocument;
 import Javatown.modele.Client;
+import Javatown.modele.Loan;
 import Javatown.persistence.ClientDao;
 
 import java.util.List;
@@ -30,5 +31,9 @@ public class ClientService {
 
     public List<AbstractDocument> getDocumentsByEditor(String editor) {
         return dao.findDocumentsByEditors(editor);
+    }
+
+    public List<Loan> getloans(long clientId) {
+        return dao.getLoans(clientId);
     }
 }

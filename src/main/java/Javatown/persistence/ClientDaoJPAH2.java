@@ -2,6 +2,7 @@ package Javatown.persistence;
 
 import Javatown.modele.AbstractDocument;
 import Javatown.modele.Client;
+import Javatown.modele.Loan;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
@@ -71,5 +72,11 @@ public class ClientDaoJPAH2 extends BaseDaoH2 implements ClientDao {
         em.getTransaction().commit();
         em.close();
         return documents;
+    }
+
+    @Override
+    public List<Loan> getLoans(long clientId) {
+        Client client = findById(Client.class, clientId);
+        return client.getLoans();
     }
 }
