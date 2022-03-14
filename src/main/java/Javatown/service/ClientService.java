@@ -27,4 +27,8 @@ public class ClientService {
     public List<AbstractDocument> getDocumentsByAuthor(String author) {
         return dao.findDocumentsByAuthor(author);
     }
+
+    public List<AbstractDocument> getDocumentsByEditor(String editor) {
+        return dao.findDocumentsByEditors(editor);
+    }
 }

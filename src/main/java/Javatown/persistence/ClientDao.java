@@ -13,4 +13,6 @@ public interface ClientDao {
     List<AbstractDocument> findDocumentByTitle(String title);
 
     List<AbstractDocument> findDocumentsByAuthor(String author);
+
+    List<AbstractDocument> findDocumentsByEditors(String editor);
 }

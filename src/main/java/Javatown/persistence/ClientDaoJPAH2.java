@@ -54,4 +54,22 @@ public class ClientDaoJPAH2 extends BaseDaoH2 implements ClientDao {
         em.close();
         return documents;
     }
+
+    @Override
+    public List<AbstractDocument> findDocumentsByEditors(String editor) {
+        final EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+
+        final TypedQuery<AbstractDocument> query = em.createQuery(
+                "select p from AbstractDocument p " +
+                        "where p.editor = :editorName"
+                , AbstractDocument.class);
+        query.setParameter("editorName", editor);
+
+        final List<AbstractDocument> documents = query.getResultList();
+
+        em.getTransaction().commit();
+        em.close();
+        return documents;
+    }
 }
