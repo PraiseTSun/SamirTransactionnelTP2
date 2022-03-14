@@ -23,6 +23,7 @@ public class Main {
         var loan1Id = employeService.createLoan(clientId, bookId, "2022-02-10");
         var loan2Id = employeService.createLoan(clientId, cdId, "2022-02-10");
         var loan3Id = employeService.createLoan(clientId, dvdId, "2022-02-10");
+        var debt1Id = employeService.createDebt(clientId, "2022-03-04");
 
 
         System.out.println(clientService.getClientByPassword("Samir", "Badi", "PraiseTSun"));

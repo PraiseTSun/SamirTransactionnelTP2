@@ -46,4 +46,12 @@ public class EmployeDaoJPAH2 extends BaseDaoH2 implements EmployeDao {
         save(loan);
         return loan.getId();
     }
+
+    @Override
+    public long saveDebt(long clientId, String dateOfReturn) {
+        Client client = findById(Client.class, clientId);
+        Debt debt = new Debt(client, dateOfReturn);
+        save(debt);
+        return debt.getId();
+    }
 }

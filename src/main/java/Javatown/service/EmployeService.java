@@ -32,4 +32,8 @@ public class EmployeService {
     public long createLoan(long clientId, long documentId, String dateOfLoan) {
         return dao.saveLoan(clientId, documentId, dateOfLoan);
     }
+
+    public long createDebt(long clientId, String dateOfReturn) {
+        return dao.saveDebt(clientId, dateOfReturn);
+    }
 }

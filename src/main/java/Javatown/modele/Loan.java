@@ -19,7 +19,7 @@ public class Loan {
     private long id;
 
     @ManyToOne
-    @JoinColumn(name = "client_id")
+    @JoinColumn(name = "fk_client")
     @ToString.Exclude
     private Client client;
 

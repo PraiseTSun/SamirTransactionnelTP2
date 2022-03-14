@@ -17,7 +17,8 @@ public class Client extends AbstractUser{
     private String resident;
     @OneToMany(mappedBy = "client", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Loan> loans;
-
+//    @OneToMany(mappedBy = "client", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+//    private List<Debt> debts;
 
     public Client(String firstName, String lastName, String password, String resident) {
         super(firstName, lastName, password);
