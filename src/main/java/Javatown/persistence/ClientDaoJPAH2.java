@@ -1,6 +1,11 @@
 package Javatown.persistence;
 
+import Javatown.modele.AbstractDocument;
 import Javatown.modele.Client;
+
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+import java.util.List;
 
 public class ClientDaoJPAH2 extends BaseDaoH2 implements ClientDao {
     @Override
@@ -14,4 +19,23 @@ public class ClientDaoJPAH2 extends BaseDaoH2 implements ClientDao {
     public Client findClientByPassword(String firstName, String lastName, String password) {
         return findByPassword(Client.class, firstName, lastName, password);
     }
+
+    @Override
+    public List<AbstractDocument> findDocumentByTitle(String title) {
+        final EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+
+        final TypedQuery<AbstractDocument> query = em.createQuery(
+                "select p from AbstractDocument p " +
+                        "where p.title like '%" + title + "%'"
+                , AbstractDocument.class);
+
+        final List<AbstractDocument> documents = query.getResultList();
+
+        em.getTransaction().commit();
+        em.close();
+        return documents;
+    }
+
+
 }

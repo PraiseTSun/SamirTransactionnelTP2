@@ -36,5 +36,8 @@ public class Main {
         System.out.println(employeService.getDocumentById(bookId));
         System.out.println(employeService.getDocumentById(cdId));
         System.out.println(employeService.getDocumentById(dvdId));
+
+        System.out.println(clientService.getDocumentsByName("Canada"));
+        System.out.println(clientService.getDocumentsByAuthor("Steve Lee"));
     }
 }
