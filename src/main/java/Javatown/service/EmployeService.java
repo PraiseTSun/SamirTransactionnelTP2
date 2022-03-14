@@ -1,5 +1,6 @@
 package Javatown.service;
 
+import Javatown.modele.AbstractDocument;
 import Javatown.modele.Employe;
 import Javatown.persistence.EmployeDao;
 
@@ -35,5 +36,9 @@ public class EmployeService {
 
     public long createDebt(long clientId, String dateOfReturn) {
         return dao.saveDebt(clientId, dateOfReturn);
+    }
+
+    public AbstractDocument getDocumentById(long documentId) {
+        return dao.findDocumentById(documentId);
     }
 }

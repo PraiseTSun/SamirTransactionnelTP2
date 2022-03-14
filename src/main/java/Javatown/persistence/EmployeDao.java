@@ -1,5 +1,6 @@
 package Javatown.persistence;
 
+import Javatown.modele.AbstractDocument;
 import Javatown.modele.Employe;
 
 public interface EmployeDao {
@@ -14,6 +15,8 @@ public interface EmployeDao {
     long saveDVD(String title, String author, String editor, String year, String genre);
 
     long saveLoan(long clientId, long documentId, String dateOfLoan);
+
+    AbstractDocument findDocumentById(long documentId);
 
     long saveDebt(long clientId, String dateOfReturn);
 }

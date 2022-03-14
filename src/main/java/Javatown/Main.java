@@ -32,5 +32,9 @@ public class Main {
 
         System.out.println(adminService.getLoansOfMonth("February"));
         System.out.println(adminService.getDebtsOfMonth("March"));
+
+        System.out.println(employeService.getDocumentById(bookId));
+        System.out.println(employeService.getDocumentById(cdId));
+        System.out.println(employeService.getDocumentById(dvdId));
     }
 }

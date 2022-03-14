@@ -48,6 +48,11 @@ public class EmployeDaoJPAH2 extends BaseDaoH2 implements EmployeDao {
     }
 
     @Override
+    public AbstractDocument findDocumentById(long documentId) {
+        return findById(AbstractDocument.class, documentId);
+    }
+
+    @Override
     public long saveDebt(long clientId, String dateOfReturn) {
         Client client = findById(Client.class, clientId);
         Debt debt = new Debt(client, dateOfReturn);
