@@ -10,4 +10,6 @@ public interface EmployeDao {
     long saveBook(String title, String author, String edithor, String year, int pages, String genre);
 
     long saveCD(String title, String author, String editor, String year, String genre);
+
+    long saveDVD(String title, String author, String editor, String year, String genre);
 }

@@ -24,4 +24,8 @@ public class EmployeService {
     public long createCD(String title, String author, String editor, String year, String genre) {
         return dao.saveCD(title, author, editor, year, genre);
     }
+
+    public long createDVD(String title, String author, String editor, String year, String genre) {
+        return dao.saveDVD(title, author, editor, year, genre);
+    }
 }

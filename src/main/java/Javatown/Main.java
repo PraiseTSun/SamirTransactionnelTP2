@@ -19,6 +19,7 @@ public class Main {
 
         var bookId = employeService.createBook("Atlas du Canada", "Bob", "Marley", "2005", 250, "Geographie");
         var cdId = employeService.createCD("Viking", "Amon Amarth", "Marvel", "2010", "Heavy Metal");
+        var dvdId = employeService.createDVD("Avenger End Game", "Steve Lee", "Marvel", "2019", "Action");
 
 
         System.out.println(clientService.getClientByPassword("Samir", "Badi", "PraiseTSun"));
