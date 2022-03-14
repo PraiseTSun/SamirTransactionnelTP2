@@ -9,4 +9,9 @@ public class AdminDaoJPAH2 extends BaseDaoH2 implements AdminDao {
         save(admin);
         return admin.getId();
     }
+
+    @Override
+    public Administrator findAdminByPassword(String firstName, String lastName, String password) {
+        return findByPassword(Administrator.class, firstName, lastName, password);
+    }
 }
