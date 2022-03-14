@@ -12,4 +12,6 @@ public interface EmployeDao {
     long saveCD(String title, String author, String editor, String year, String genre);
 
     long saveDVD(String title, String author, String editor, String year, String genre);
+
+    long saveLoan(long clientId, long documentId, String dateOfLoan);
 }

@@ -29,7 +29,7 @@ public class Loan {
     private java.sql.Date dateOfReturn;
 
     //private Document document;
-    public Loan(Client client, String dateOfLoan, AbstractDocument document) {
+    public Loan(Client client, AbstractDocument document, String dateOfLoan) {
         this.client = client;
         this.dateOfLoan = java.sql.Date.valueOf(dateOfLoan);
         this.dateOfReturn = java.sql.Date.valueOf(returnDate(dateOfLoan, document.loanTimeInDay()));

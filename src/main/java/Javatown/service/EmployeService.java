@@ -28,4 +28,8 @@ public class EmployeService {
     public long createDVD(String title, String author, String editor, String year, String genre) {
         return dao.saveDVD(title, author, editor, year, genre);
     }
+
+    public long createLoan(long clientId, long documentId, String dateOfLoan) {
+        return dao.saveLoan(clientId, documentId, dateOfLoan);
+    }
 }
