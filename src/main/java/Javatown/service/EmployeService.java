@@ -20,4 +20,8 @@ public class EmployeService {
     public long createBook(String title, String author, String edithor, String year, int pages, String genre) {
         return dao.saveBook(title, author, edithor, year, pages, genre);
     }
+
+    public long createCD(String title, String author, String editor, String year, String genre) {
+        return dao.saveCD(title, author, editor, year, genre);
+    }
 }

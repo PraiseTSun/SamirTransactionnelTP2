@@ -18,6 +18,7 @@ public class Main {
         var adminId = adminService.createAdmin("Dave", "Smith", "admin");
 
         var bookId = employeService.createBook("Atlas du Canada", "Bob", "Marley", "2005", 250, "Geographie");
+        var cdId = employeService.createCD("Viking", "Amon Amarth", "Marvel", "2010", "Heavy Metal");
 
 
         System.out.println(clientService.getClientByPassword("Samir", "Badi", "PraiseTSun"));

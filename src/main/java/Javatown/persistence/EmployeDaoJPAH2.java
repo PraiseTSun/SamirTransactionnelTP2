@@ -1,6 +1,7 @@
 package Javatown.persistence;
 
 import Javatown.modele.Book;
+import Javatown.modele.CD;
 import Javatown.modele.Employe;
 
 public class EmployeDaoJPAH2 extends BaseDaoH2 implements EmployeDao {
@@ -21,5 +22,12 @@ public class EmployeDaoJPAH2 extends BaseDaoH2 implements EmployeDao {
         Book book = new Book(title, author, edithor, year, pages, genre);
         save(book);
         return book.getId();
+    }
+
+    @Override
+    public long saveCD(String title, String author, String editor, String year, String genre) {
+        CD cd = new CD(title, author, editor, year, genre);
+        save(cd);
+        return cd.getId();
     }
 }
