@@ -29,5 +29,7 @@ public class Main {
         System.out.println(clientService.getClientByPassword("Samir", "Badi", "PraiseTSun"));
         System.out.println(employeService.getEmployeByPassword("James", "Levesque", "test"));
         System.out.println(adminService.getAdminByPassword("Dave", "Smith", "admin"));
+
+        System.out.println(adminService.getLoansOfMonth("February"));
     }
 }
