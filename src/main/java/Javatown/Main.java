@@ -31,5 +31,6 @@ public class Main {
         System.out.println(adminService.getAdminByPassword("Dave", "Smith", "admin"));
 
         System.out.println(adminService.getLoansOfMonth("February"));
+        System.out.println(adminService.getDebtsOfMonth("March"));
     }
 }

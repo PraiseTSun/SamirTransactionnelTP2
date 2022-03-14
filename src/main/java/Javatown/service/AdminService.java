@@ -1,6 +1,7 @@
 package Javatown.service;
 
 import Javatown.modele.Administrator;
+import Javatown.modele.Debt;
 import Javatown.modele.Loan;
 import Javatown.persistence.AdminDao;
 
@@ -22,5 +23,9 @@ public class AdminService {
 
     public List<Loan> getLoansOfMonth(String month) {
         return dao.findLoansOfMonth(month);
+    }
+
+    public List<Debt> getDebtsOfMonth(String month) {
+        return dao.findDebtsOfMonth(month);
     }
 }
