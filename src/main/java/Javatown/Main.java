@@ -17,6 +17,9 @@ public class Main {
         var employeId = employeService.createEmploye("James", "Levesque", "test");
         var adminId = adminService.createAdmin("Dave", "Smith", "admin");
 
+        var bookId = employeService.createBook("Atlas du Canada", "Bob", "Marley", "2005", 250, "Geographie");
+
+
         System.out.println(clientService.getClientByPassword("Samir", "Badi", "PraiseTSun"));
         System.out.println(employeService.getEmployeByPassword("James", "Levesque", "test"));
         System.out.println(adminService.getAdminByPassword("Dave", "Smith", "admin"));
